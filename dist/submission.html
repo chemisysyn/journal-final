@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Submit Your Manuscript - International Journal of Advanced Research and Innovation">
+    <title>Submission - Journal of Chemical and Synthetic Biology</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script type="module" crossorigin src="/assets/submission-b7FrERbH.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/styles-DpJzQZsQ.css">
+</head>
+
+<body>
+
+    <!-- ========================================
+         GLOBAL HEADER (STICKY)
+         ======================================== -->
+
+    <header class="site-header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-space">
+                    <img src="/assets/logo-CZg6nisK.png" alt="Journal Logo">
+                </div>
+
+                <!-- Journal Info Removed -->
+
+                <div class="header-actions" id="header-actions">
+                    <a href="submission.html" class="btn-header" id="submit-nav-btn">Submit an Article</a>
+                    <div id="user-panel" class="user-panel" style="display: none;">
+                        <img id="user-avatar" src="" alt="User Avatar" class="user-avatar">
+                        <div class="user-info">
+                            <span id="user-email" class="user-email"></span>
+                            <button id="logout-btn" class="btn-logout">Logout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="current-issue.html">Current Issue</a></li>
+                    <li><a href="archives.html">Archives</a></li>
+                    <li><a href="author-guidelines.html">Author Guidelines</a></li>
+                    <li><a href="editorial-board.html">Editorial Board</a></li>
+                    <li><a href="submission.html" class="nav-submit">Submission</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========================================
+         PAGE HERO
+         ======================================== -->
+
+    <div class="page-hero">
+        <div class="container">
+            <h1 class="page-title">Submit Your Manuscript</h1>
+        </div>
+    </div>
+
+    <!-- ========================================
+         SUBMISSION BOX
+         ======================================== -->
+
+    <section class="section section-white">
+        <div class="container">
+            <!-- LOGIN SECTION -->
+            <div id="login-section" class="submission-box">
+                <h2 style="margin-bottom: 15px;">Submit Manuscript</h2>
+                <p style="margin-bottom: 30px;">Authors must log in before submitting a manuscript to the Journal of
+                    Chemical and Synthetic Biology.</p>
+
+                <div class="guidelines-agreement"
+                    style="margin: 30px 0; text-align: left; background: var(--light-gray); padding: 20px; border-radius: 8px; border: 1px solid var(--border-gray);">
+                    <p style="font-size: 14px; margin-bottom: 15px; color: var(--text-dark);">
+                        Please review our <a href="author-guidelines.html" target="_blank"
+                            style="color: var(--primary-blue); font-weight: 600; text-decoration: none;">Author
+                            Guidelines <i class="fas fa-external-link-alt" style="font-size: 12px;"></i></a> before
+                        proceeding.
+                    </p>
+                    <label
+                        style="display: flex; align-items: center; gap: 12px; cursor: pointer; font-size: 15px; color: var(--text-dark); font-weight: 500;">
+                        <input type="checkbox" id="agree-checkbox" style="width: 20px; height: 20px; cursor: pointer;">
+                        I have read and agree to the Author Guidelines
+                    </label>
+                </div>
+
+                <button id="login-google-btn" class="btn-primary" disabled
+                    style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 12px; padding: 16px; font-size: 16px;">
+                    <i class="fab fa-google"></i> Login with Google (Gmail)
+                </button>
+            </div>
+
+        </div>
+
+        <!-- SUBMISSION FORM (Initially Hidden) -->
+        <div id="submission-form-container" class="submission-form-container" style="display: none;">
+            <form id="manuscript-form" novalidate>
+
+                <!-- STEP 1: MANUSCRIPT DETAILS -->
+                <!-- STEP 1: MANUSCRIPT DETAILS -->
+                <div class="submission-step active" id="step-wrapper-1">
+                    <div class="step-header">
+                        <div class="step-icon">1</div>
+                        <h3>Manuscript Details</h3>
+                    </div>
+                    <div class="step-summary" id="step-summary-1"></div>
+                    <div class="step-content">
+
+                        <div class="form-group">
+                            <label for="manuscript-title">Manuscript Title * (Max 50 words)</label>
+                            <textarea id="manuscript-title" name="manuscript_title" rows="2"
+                                placeholder="Enter the full title of your research paper" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="manuscript-abstract">Abstract * (Max 200 words)</label>
+                            <textarea id="manuscript-abstract" name="abstract" rows="4"
+                                placeholder="Enter the abstract of your manuscript" required></textarea>
+                        </div>
+
+                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+                            <div class="form-group">
+                                <label for="article-type">Article Type *</label>
+                                <select id="article-type" name="article_type" required>
+                                    <option value="">Select article type</option>
+                                    <option value="Research Article">Research Article</option>
+                                    <option value="Review Article">Review Article</option>
+                                    <option value="Short Communication">Short Communication</option>
+                                    <option value="Technical Note">Technical Note</option>
+                                    <option value="Methods Article">Methods Article</option>
+                                    <option value="Data Note">Data Note</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject-area">Primary Subject Area *</label>
+                                <select id="subject-area" name="subject_area" required>
+                                    <option value="">Select a subject area</option>
+                                    <option value="Synthetic Biology">Synthetic Biology</option>
+                                    <option value="Chemical Biology and Biomanufacturing">Chemical Biology and
+                                        Biomanufacturing</option>
+                                    <option value="Biomolecular Engineering">Biomolecular Engineering</option>
+                                    <option value="Applications in Biotechnology and Medicine">Applications in
+                                        Biotechnology and Medicine</option>
+                                    <option value="Computational and Systems Biology and Bio AI">Computational and
+                                        Systems Biology and Bio AI</option>
+                                    <option value="Environmental and Industrial Applications">Environmental and
+                                        Industrial Applications</option>
+                                    <option value="AYUSH and Integrative Medicine">AYUSH and Integrative Medicine
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Manuscript – with author details * (PDF or Word, max 10MB)</label>
+                            <div class="file-upload-box" onclick="document.getElementById('file-input').click()">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p><strong>Click to upload or drag and drop</strong></p>
+                                <p>PDF, DOC, DOCX (Max 10MB)</p>
+
+                                <input type="file" id="file-input" name="manuscript_file" accept=".pdf,.doc,.docx"
+                                    hidden required>
+                            </div>
+                            <div id="file-name-display" style="display:none;"></div>
+                        </div>
+
+                        <div class="step-actions">
+                            <button type="button" class="btn-primary btn-continue" data-next="2">Continue</button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- STEP 2: KEYWORDS -->
+                <!-- STEP 2: KEYWORDS -->
+                <div class="submission-step" id="step-wrapper-2">
+                    <div class="step-header">
+                        <div class="step-icon">2</div>
+                        <h3>Keywords</h3>
+                    </div>
+                    <div class="step-summary" id="step-summary-2"></div>
+                    <div class="step-content">
+                        <div class="form-group">
+                            <label>Keywords * (3–7 keywords)</label>
+                            <p>Type a keyword and press Enter or comma.</p>
+
+                            <div class="tag-input-container" id="keywords-container">
+                                <input type="text" class="tag-input-field" id="keyword-input"
+                                    placeholder="Add keyword...">
+                            </div>
+
+                            <!-- FINAL comma-separated keywords go here -->
+                            <input type="hidden" id="keywords-hidden" name="keywords" required>
+                        </div>
+
+                        <div class="step-actions">
+                            <button type="button" class="btn-primary btn-continue" data-next="3">Continue</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- STEP 3: AUTHOR DETAILS -->
+                <!-- STEP 3: AUTHOR DETAILS -->
+                <div class="submission-step" id="step-wrapper-3">
+                    <div class="step-header">
+                        <div class="step-icon">3</div>
+                        <h3>Author Details</h3>
+                    </div>
+                    <div class="step-summary" id="step-summary-3"></div>
+                    <div class="step-content">
+
+                        <div class="author-accordion-item active corresponding-author-highlight"
+                            id="corresp-author-accordion">
+                            <div class="author-accordion-header">
+                                <div style="display: flex; align-items: center; gap: 12px;">
+                                    <div
+                                        style="width: 32px; height: 32px; background: #dbeafe; color: #1e40af; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="author-accordion-title">YOU – Corresponding Author</div>
+                                </div>
+                                <span class="author-badge">Corresponding</span>
+                            </div>
+
+                            <div class="author-accordion-content">
+                                <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+                                    <div class="form-group">
+                                        <label for="corresp-email">Email Address (Read-only)</label>
+                                        <input type="email" id="corresp-email" name="corresp_email" readonly
+                                            style="background: #f8fafc; cursor: not-allowed; border-color: #e2e8f0;">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="corresp-orcid">ORCID ID (Optional)</label>
+                                        <input type="text" id="corresp-orcid" name="corresp_orcid"
+                                            placeholder="0000-0000-0000-0000">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="corresp-first-name">First Name *</label>
+                                        <input type="text" id="corresp-first-name" name="corresp_first_name"
+                                            placeholder="Enter first name" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="corresp-last-name">Last Name *</label>
+                                        <input type="text" id="corresp-last-name" name="corresp_last_name"
+                                            placeholder="Enter last name" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="corresp-pub-name">Published Name</label>
+                                        <input type="text" id="corresp-pub-name" name="corresp_published_name"
+                                            placeholder="e.g. J. Doe">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="corresp-country">Country *</label>
+                                        <input type="text" id="corresp-country" name="corresp_country"
+                                            placeholder="Enter country" required>
+                                    </div>
+
+                                    <div class="form-group" style="grid-column: span 2;">
+                                        <label for="corresp-org">Organization/Affiliation *</label>
+                                        <input type="text" id="corresp-org" name="corresp_organization"
+                                            placeholder="Enter full organization name" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="corresp-dept">Department *</label>
+                                        <input type="text" id="corresp-dept" name="corresp_department"
+                                            placeholder="Enter department" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="corresp-pos">Position</label>
+                                        <input type="text" id="corresp-pos" name="corresp_position"
+                                            placeholder="e.g. Professor, Researcher">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="co-authors-accordion-list"></div>
+
+                        <button type="button" id="add-coauthor-btn" class="btn-secondary" style="margin-top: 15px;">
+                            <i class="fas fa-plus"></i> Add Another Author
+                        </button>
+
+                        <div class="step-actions">
+                            <button type="button" class="btn-primary btn-continue" data-next="4">Continue</button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- STEP 4: PREVIEW & SUBMIT -->
+                <div class="submission-step" id="step-wrapper-4">
+                    <div class="step-header">
+                        <div class="step-icon">4</div>
+                        <h3>Preview & Submit</h3>
+                    </div>
+                    <div class="step-content">
+                        <div id="submission-preview"
+                            style="background: var(--white); border: 1px solid var(--border-gray); border-radius: 12px; overflow: hidden; margin-bottom: 30px;">
+                            <!-- Preview content injected by JS -->
+                        </div>
+
+                        <div
+                            style="background: #f8fafc; padding: 24px; border-radius: 12px; border: 1px solid var(--border-gray); margin-bottom: 30px;">
+                            <div class="form-group">
+                                <label style="display: flex; align-items: flex-start; gap: 12px; cursor: pointer;">
+                                    <input type="checkbox" required style="width: 18px; height: 18px; margin-top: 3px;">
+                                    <span>The manuscript is original and not under consideration elsewhere. *</span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label style="display: flex; align-items: flex-start; gap: 12px; cursor: pointer;">
+                                    <input type="checkbox" required style="width: 18px; height: 18px; margin-top: 3px;">
+                                    <span>All authors have approved the submission. *</span>
+                                </label>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 0;">
+                                <label style="display: flex; align-items: flex-start; gap: 12px; cursor: pointer;">
+                                    <input type="checkbox" required style="width: 18px; height: 18px; margin-top: 3px;">
+                                    <span>All information provided is accurate and complete. *</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-navigation" style="margin-top: 0; padding-top: 0; border-top: none;">
+                            <div style="display: flex; gap: 12px;">
+                                <button type="button" id="prev-btn" class="btn-primary btn-back">Back</button>
+                            </div>
+                            <button type="submit" id="submit-btn" class="btn-primary"
+                                style="background: var(--accent-teal); border-color: var(--accent-teal);">Submit
+                                Manuscript</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SUBMISSION TYPES
+         ======================================== -->
+
+    <section class="section section-gray">
+        <div class="container">
+            <h2 class="section-title">Types of Submissions</h2>
+            <div class="metrics-grid">
+                <div class="metric-card" style="text-align: left;">
+                    <h3 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 20px;">Research Articles</h3>
+                    <p style="font-size: 15px; color: #555; line-height: 1.8;">
+                        Original research presenting new findings, methodologies, or significant advances in the field.
+                        Typically 5,000-8,000 words.
+                    </p>
+                </div>
+
+                <div class="metric-card" style="text-align: left;">
+                    <h3 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 20px;">Review Articles</h3>
+                    <p style="font-size: 15px; color: #555; line-height: 1.8;">
+                        Comprehensive, critical analyses of existing literature on specific topics. Usually 8,000-12,000
+                        words with extensive references.
+                    </p>
+                </div>
+
+                <div class="metric-card" style="text-align: left;">
+                    <h3 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 20px;">Short Communications
+                    </h3>
+                    <p style="font-size: 15px; color: #555; line-height: 1.8;">
+                        Brief reports of significant preliminary findings or novel methodologies. Limited to 2,500
+                        words.
+                    </p>
+                </div>
+
+                <div class="metric-card" style="text-align: left;">
+                    <h3 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 20px;">Case Studies</h3>
+                    <p style="font-size: 15px; color: #555; line-height: 1.8;">
+                        Detailed examination of specific instances, applications, or phenomena with broader
+                        implications. 3,000-5,000 words.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER
+         ======================================== -->
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Journal Information</h4>
+                    <p>ISSN: 2347-3207 (Print)<br>
+                        E-ISSN: 2347-3215 (Online)<br>
+                        Frequency: Bi-annual<br>
+                        Founded: 2025</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="current-issue.html">Current Issue</a></li>
+                        <li><a href="archives.html">Archives</a></li>
+                        <li><a href="author-guidelines.html">Author Guidelines</a></li>
+                        <li><a href="editorial-board.html">Editorial Board</a></li>
+                        <li><a href="submission.html">Submit Article</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Details</h4>
+                    <p>
+                        Editorial Office<br>
+                        673/4B, First floor, Sector C<br>
+                        V. G Rao Nagar<br>
+                        Vellore 632007<br>
+                        Email: submission@chemsynbiology.com
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="footer-social">
+                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 International Journal of Advanced Research and Innovation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
